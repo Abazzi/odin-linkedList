@@ -11,4 +11,16 @@ export default class LinkedList {
     this.head = new Node(value);
     this.head.nextNode = temp;
   }
+
+  append(value) {
+    if (!this.head) {
+      this.prepend(value);
+    } else {
+      let temp = this.head;
+      while (temp.nextNode != null) {
+        temp = temp.nextNode;
+      }
+      temp.nextNode = new Node(value);
+    }
+  }
 }
