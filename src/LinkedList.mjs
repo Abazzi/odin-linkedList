@@ -23,4 +23,14 @@ export default class LinkedList {
       temp.nextNode = new Node(value);
     }
   }
+
+  size() {
+    let size = 0;
+    let temp = this.head;
+    while (temp != null) {
+      size++;
+      temp = temp.nextNode;
+    }
+    return size;
+  }
 }
