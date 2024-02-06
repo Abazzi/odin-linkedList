@@ -46,7 +46,7 @@ export default class LinkedList {
     return temp;
   }
 
- pop() {
+  pop() {
     let current = this.head;
     let previous = null;
     while (current.nextNode != null) {
@@ -56,13 +56,23 @@ export default class LinkedList {
     previous.nextNode = null;
   }
 
- contains(value) {
+  contains(value) {
     let temp = this.head;
     while (temp != null) {
       if (temp.value == value) return true;
       temp = temp.nextNode;
     }
     return false;
+  }
+
+  find(value) {
+    let temp = this.head;
+    let index = 0;
+    while (temp != null) {
+      index++;
+      if (temp.value == value) return index;
+      temp = temp.nextNode;
+    }
   }
 }
 
