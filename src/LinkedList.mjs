@@ -33,6 +33,7 @@ export default class LinkedList {
     }
     return size;
   }
+
   listHead() {
     return this.head;
   }
@@ -43,5 +44,15 @@ export default class LinkedList {
       temp = temp.nextNode;
     }
     return temp;
+  }
+
+ pop() {
+    let current = this.head;
+    let previous = null;
+    while (current.nextNode != null) {
+      previous = current;
+      current = current.nextNode;
+    }
+    previous.nextNode = null;
   }
 }
