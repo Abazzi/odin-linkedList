@@ -74,7 +74,6 @@ export default class LinkedList {
       temp = temp.nextNode;
     }
   }
-}
 
   toString() {
     let temp = this.head;
