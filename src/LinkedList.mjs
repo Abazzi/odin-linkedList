@@ -76,3 +76,16 @@ export default class LinkedList {
   }
 }
 
+  toString() {
+    let temp = this.head;
+    let string = '';
+    while (temp != null) {
+      string += `[${temp.value}]->`;
+      temp = temp.nextNode;
+    }
+    if (temp == null) {
+      string += '[null]';
+    }
+    return string;
+  }
+}
